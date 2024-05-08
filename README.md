@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="logo" src="https://github.com/vsukhor/dmsh/blob/main/images/logo-with-text.svg" width="50%">
+  <img alt="logo" src="images/logo-with-text.svg" width="50%">
   <p align="center">The worst mesh generator you'll ever use.</p>
 </p>
 
@@ -33,8 +33,13 @@ highest-quality 2D meshes in the west.
 
 #### Primitives
 
-| <img alt="circle" src="https://github.com/vsukhor/dmsh/blob/main/images/circle.svg" width="100%"> | <img alt="circle" src="https://github.com/vsukhor/dmsh/blob/main/images/rectangle.svg" width="100%"> | <img alt="circle" src="https://github.com/vsukhor/dmsh/blob/main/images/polygon.svg" width="100%"> |
-|:---------------------------------------------------------------------------------------:| :--------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: |
+<table>
+  <tr>
+    <td> <img alt="circle" src="images/circle.svg" width="100%"> </td>
+    <td> <img alt="circle" src="images/rectangle.svg" width="100%"> </td>
+    <td> <img alt="circle" src="images/polygon.svg" width="100%"> </td>
+  </tr>
+</table>
 
 ```python
 import dmsh
@@ -82,8 +87,13 @@ X, cells = dmsh.generate(geo, 0.1)
 
 ##### Difference
 
-| <img src="https://github.com/vsukhor/dmsh/blob/main/images/moon.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/pacman.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/rectangle-hole-refinement.svg" width="100%"> |
-| :--------------------------------------------------------------: | :----------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+<table>
+  <tr>
+    <td> <img src="images/moon.svg" width="100%"> </td>
+    <td> <img src="images/pacman.svg" width="100%"> </td>
+    <td> <img src="images/rectangle-hole-refinement.svg" width="100%"> </td>
+  </tr>
+</table>
 
 ```python
 import dmsh
@@ -115,8 +125,13 @@ X, cells = dmsh.generate(geo, lambda pts: np.abs(c.dist(pts)) / 5 + 0.05, tol=1.
 
 ##### Union
 
-| <img src="https://github.com/vsukhor/dmsh/blob/main/images/union-circles.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/union-rectangles.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/union-three-circles.svg" width="100%"> |
-| :-----------------------------------------------------------------------: | :--------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+<table>
+  <tr>
+    <td> <img src="images/union-circles.svg" width="100%"> </td>
+    <td> <img src="images/union-rectangles.svg" width="100%"> </td>
+    <td> <img src="images/union-three-circles.svg" width="100%"> </td>
+  </tr>
+</table>
 
 ```python
 import dmsh
@@ -149,8 +164,13 @@ X, cells = dmsh.generate(geo, 0.15)
 
 #### Intersection
 
-| <img src="https://github.com/vsukhor/dmsh/blob/main/images/intersection-circles.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/intersection-three-circles.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/intersection-circle-halfspace.svg" width="100%"> |
-| :------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
+<table>
+  <tr>
+    <td> <img src="images/intersection-circles.svg" width="100%"> </td>
+    <td> <img src="images/intersection-three-circles.svg" width="100%"> </td>
+    <td> <img src="images/intersection-circle-halfspace.svg" width="100%"> </td>
+  </tr>
+</table>
 
 ```python
 import dmsh
@@ -184,10 +204,12 @@ X, cells = dmsh.generate(geo, 0.1)
 ```
 
 ### Rotation, translation, scaling
-
-| <img src="https://github.com/vsukhor/dmsh/blob/main/images/rotation.svg" width="100%">  | <img src="https://github.com/vsukhor/dmsh/blob/main/images/scaling.svg" width="100%"> |
-|:---------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|
-
+<table>
+  <tr>
+    <td> <img src="images/rotation.svg" width="100%"></td>
+    <td> <img src="images/scaling.svg" width="100%"> </td>
+ </tr>
+</table>
 ```python
 import dmsh
 import numpy as np
@@ -212,7 +234,7 @@ X, cells = dmsh.generate(geo, 0.1, tol=1.0e-5)
 
 ### Local refinement
 
-<img alt="local-refinement" src="https://github.com/vsukhor/dmsh/blob/main/images/local-refinement.svg" width="30%">
+<img alt="local-refinement" src="images/local-refinement.svg" width="30%">
 
 All objects can be used to refine the mesh according to the distance to the object;
 e.g. a `Path`:
