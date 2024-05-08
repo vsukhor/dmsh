@@ -36,8 +36,8 @@ highest-quality 2D meshes in the west.
 <table>
   <tr>
     <td> <img alt="circle" src="images/circle.svg" width="100%"> </td>
-    <td> <img alt="circle" src="images/rectangle.svg" width="100%"> </td>
-    <td> <img alt="circle" src="images/polygon.svg" width="100%"> </td>
+    <td> <img alt="rectangle" src="images/rectangle.svg" width="100%"> </td>
+    <td> <img alt="polygon" src="images/polygon.svg" width="100%"> </td>
   </tr>
 </table>
 
