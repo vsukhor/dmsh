@@ -185,8 +185,8 @@ X, cells = dmsh.generate(geo, 0.1)
 
 ### Rotation, translation, scaling
 
-| <img src="https://github.com/vsukhor/dmsh/blob/main/images/rotation.svg" width="100%"> | <img src="https://github.com/vsukhor/dmsh/blob/main/images/scaling.svg" width="100%"> |
-| :------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| <img src="https://github.com/vsukhor/dmsh/blob/main/images/rotation.svg" width="100%">  | <img src="https://github.com/vsukhor/dmsh/blob/main/images/scaling.svg" width="100%"> |
+|:---------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|
 
 ```python
 import dmsh
