@@ -22,6 +22,8 @@ Combined with [optimesh](https://github.com/nschloe/optimesh), dmsh produces the
 highest-quality 2D meshes in the west.
 
 This is a somewhat modified fork of the original [dmsh](https://github.com/meshpro/dmsh) by [MeshPro](https://github.com/meshpro).
+The original version of **dmsh** is [available from the Python Package
+Index](https://pypi.org/project/dmsh/).
 
 ### Examples
 
@@ -293,7 +295,7 @@ domain and positive outside. The 0-level set forms the domain boundary.)
 
 ### Installation
 
-dmsh is [available from the Python Package
+The original version of **dmsh** is [available from the Python Package
 Index](https://pypi.org/project/dmsh/), so simply type
 
 ```
