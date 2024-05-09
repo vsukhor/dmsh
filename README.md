@@ -33,13 +33,7 @@ highest-quality 2D meshes in the west.
 
 #### Primitives
 
-<table>
-  <tr>
-    <td> <img alt="circle" src="images/circle.svg" width="100%"> </td>
-    <td> <img alt="rectangle" src="images/rectangle.svg" width="100%"> </td>
-    <td> <img alt="polygon" src="images/polygon.svg" width="100%"> </td>
-  </tr>
-</table>
+<img alt="circle" src="images/circle.svg" width="30%">
 
 ```python
 import dmsh
@@ -58,6 +52,7 @@ dmsh.helpers.show(X, cells, geo)
 # and write it to a file
 meshio.Mesh(X, {"triangle": cells}).write("circle.vtk")
 ```
+<img alt="rectangle" src="images/rectangle.svg" width="30%">
 
 ```python
 import dmsh
@@ -65,6 +60,8 @@ import dmsh
 geo = dmsh.Rectangle(-1.0, +2.0, -1.0, +1.0)
 X, cells = dmsh.generate(geo, 0.1)
 ```
+
+<img alt="polygon" src="images/polygon.svg" width="30%">
 
 ```python
 import dmsh
@@ -87,13 +84,7 @@ X, cells = dmsh.generate(geo, 0.1)
 
 ##### Difference
 
-<table>
-  <tr>
-    <td> <img src="images/moon.svg" width="100%"> </td>
-    <td> <img src="images/pacman.svg" width="100%"> </td>
-    <td> <img src="images/rectangle-hole-refinement.svg" width="100%"> </td>
-  </tr>
-</table>
+<img src="images/moon.svg" width="30%">
 
 ```python
 import dmsh
@@ -101,6 +92,8 @@ import dmsh
 geo = dmsh.Circle([-0.5, 0.0], 1.0) - dmsh.Circle([+0.5, 0.0], 1.0)
 X, cells = dmsh.generate(geo, 0.1)
 ```
+
+<img src="images/pacman.svg" width="30%">
 
 ```python
 import dmsh
@@ -111,6 +104,8 @@ X, cells = dmsh.generate(geo, 0.1, tol=1.0e-10)
 
 The following example uses a nonconstant edge length; it depends on the distance to the
 circle `c`.
+
+<img src="images/rectangle-hole-refinement.svg" width="30%">
 
 ```python
 import dmsh
@@ -125,13 +120,7 @@ X, cells = dmsh.generate(geo, lambda pts: np.abs(c.dist(pts)) / 5 + 0.05, tol=1.
 
 ##### Union
 
-<table>
-  <tr>
-    <td> <img src="images/union-circles.svg" width="100%"> </td>
-    <td> <img src="images/union-rectangles.svg" width="100%"> </td>
-    <td> <img src="images/union-three-circles.svg" width="100%"> </td>
-  </tr>
-</table>
+<img src="images/union-circles.svg" width="30%">
 
 ```python
 import dmsh
@@ -139,6 +128,7 @@ import dmsh
 geo = dmsh.Circle([-0.5, 0.0], 1.0) + dmsh.Circle([+0.5, 0.0], 1.0)
 X, cells = dmsh.generate(geo, 0.15)
 ```
+<img src="images/union-rectangles.svg" width="30%">
 
 ```python
 import dmsh
@@ -146,6 +136,7 @@ import dmsh
 geo = dmsh.Rectangle(-1.0, +0.5, -1.0, +0.5) + dmsh.Rectangle(-0.5, +1.0, -0.5, +1.0)
 X, cells = dmsh.generate(geo, 0.15)
 ```
+<img src="images/union-three-circles.svg" width="30%">
 
 ```python
 import dmsh
@@ -164,11 +155,12 @@ X, cells = dmsh.generate(geo, 0.15)
 
 #### Intersection
 
+<img src="images/intersection-circles.svg" width="30%">
 <table>
   <tr>
-    <td> <img src="images/intersection-circles.svg" width="100%"> </td>
-    <td> <img src="images/intersection-three-circles.svg" width="100%"> </td>
-    <td> <img src="images/intersection-circle-halfspace.svg" width="100%"> </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
   </tr>
 </table>
 
@@ -178,6 +170,7 @@ import dmsh
 geo = dmsh.Circle([0.0, -0.5], 1.0) & dmsh.Circle([0.0, +0.5], 1.0)
 X, cells = dmsh.generate(geo, 0.1, tol=1.0e-10)
 ```
+<img src="images/intersection-three-circles.svg" width="30%">
 
 ```python
 import dmsh
@@ -194,6 +187,8 @@ geo = dmsh.Intersection(
 X, cells = dmsh.generate(geo, 0.1, tol=1.0e-10)
 ```
 
+<img src="images/intersection-circle-halfspace.svg" width="30%">
+
 The following uses the `HalfSpace` primtive for cutting off a circle.
 
 ```python
@@ -204,12 +199,9 @@ X, cells = dmsh.generate(geo, 0.1)
 ```
 
 ### Rotation, translation, scaling
-<table>
-  <tr>
-    <td> <img src="images/rotation.svg" width="100%"></td>
-    <td> <img src="images/scaling.svg" width="100%"> </td>
- </tr>
-</table>
+
+<img src="images/rotation.svg" width="50%">
+
 ```python
 import dmsh
 import numpy as np
@@ -217,6 +209,7 @@ import numpy as np
 geo = dmsh.Rotation(dmsh.Rectangle(-1.0, +2.0, -1.0, +1.0), 0.1 * np.pi)
 X, cells = dmsh.generate(geo, 0.1, tol=1.0e-10)
 ```
+<img src="images/scaling.svg" width="50%">
 
 ```python
 import dmsh
